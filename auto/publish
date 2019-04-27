@@ -1,0 +1,15 @@
+#! /bin/bash -e
+#
+# Publish Docker image
+
+cd $(dirname $0)/..
+
+echo "--- Publishing Docker image"
+
+IMAGE_NAME="katdockero/simple-container-app"
+VERSION=$(auto/get-version)
+
+echo "Publishing Docker image: ${IMAGE_NAME}:${VERSION}"
+echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+docker push ${IMAGE_NAME}:${VERSION}
+docker push ${IMAGE_NAME}:latest

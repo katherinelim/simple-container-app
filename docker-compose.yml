@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  dev:
+    image: "ruby:2.6"
+    volumes:
+       - .:/work
+       - ruby-2.6-bundle-cache:/usr/local/bundle
+    working_dir: /work
+    ports:
+      - "5000:5000"
+volumes:
+  ruby-2.6-bundle-cache:
+    external: true

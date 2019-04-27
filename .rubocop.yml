@@ -1,0 +1,11 @@
+Metrics/LineLength:
+  Max: 120
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+Metrics/MethodLength:
+  Max: 20
+Layout/SpaceBeforeBlockBraces:
+  EnforcedStyle: no_space
+Layout/SpaceInsideBlockBraces:
+  SpaceBeforeBlockParameters: false

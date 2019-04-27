@@ -1,0 +1,6 @@
+#! /bin/bash -e
+
+cd $(dirname $0)/..
+
+# run the server using the Docker image
+docker run -it --rm -p 5000:5000 $@

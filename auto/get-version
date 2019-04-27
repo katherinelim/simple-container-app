@@ -1,0 +1,5 @@
+#! /bin/bash -e
+#
+# Get version from appmeta.yml
+
+grep version: appmeta.yml | cut -d " " -f2 | tr -d \"

@@ -1,0 +1,21 @@
+language: ruby
+rvm:
+ - 2.6
+
+branches:
+  only:
+    - master
+
+services:
+  - docker
+
+before_install:
+  - ./auto/save-sha-head
+
+script:
+  - ./auto/rubocop
+  - ./auto/rake-test
+
+after_success:
+  - ./auto/build
+  - ./auto/publish

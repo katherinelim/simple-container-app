@@ -1,0 +1,8 @@
+#!/bin/bash -eu
+
+set -o pipefail
+
+cd $(dirname $0)/..
+
+echo "--- Running Rubocop linter"
+auto/dev-environment rubocop --format json --out rubocop.json --format progress "$@"

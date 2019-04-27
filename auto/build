@@ -1,0 +1,14 @@
+#! /bin/bash -e
+#
+# Build Docker image
+
+cd $(dirname $0)/..
+
+auto/save-sha-head
+
+echo "--- Building Docker image"
+
+IMAGE_NAME="katdockero/simple-container-app"
+VERSION=$(auto/get-version)
+
+docker build -t ${IMAGE_NAME}:${VERSION} -t ${IMAGE_NAME}:latest .
