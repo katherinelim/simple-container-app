@@ -1,4 +1,5 @@
 # simple-container-app
+[![Build Status](https://travis-ci.org/katherinelim/simple-container-app.svg?branch=master)](https://travis-ci.org/katherinelim/simple-container-app)
 
 Simple-container-app provides a basic code repository for a containerised
 application with a single `/healthcheck` endpoint.
