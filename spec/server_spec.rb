@@ -1,8 +1,11 @@
 describe '.server' do
   context 'when fetching / endpoint' do
-    it 'returns 404' do
+    it 'returns Hello World' do
       get '/'
-      expect(last_response.status).to eq 404
+      expect(last_response.status).to eq 200
+      info = JSON.parse(last_response.body)
+      expect(info.size).to eq 1
+      expect(info['message']).to eq('Hello World')     
     end
   end
   context 'when fetching /healthcheck endpoint' do

@@ -9,6 +9,15 @@ require 'sinatra/namespace'
 require 'sinatra/reloader' if development?
 require 'json'
 
+# Endpoints
+get '/' do
+  logger.info("Example log - get / - HELLO WORLD")
+  content_type :json
+  {
+    message: 'Hello World'
+  }.to_json
+end
+
 get '/healthcheck' do
   logger.info('Example log - get healthcheck')
   content_type :json
