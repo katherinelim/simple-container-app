@@ -5,7 +5,7 @@ Simple-container-app provides a basic code repository for a containerised
 application with a `/healthcheck` endpoint.
 
 It's implemented in Ruby, Sinatra and uses Docker for a development environment.
-Using Sinatra web applications can be created in Ruby quickly.
+Using Sinatra, web applications can be created in Ruby quickly.
 
 ## Usage
 
@@ -125,7 +125,7 @@ Returns the `version:` value from `appmeta.yml`.
 
 `auto/publish`
 
-Publisheds the Docker image to Docker Hub.
+Uploads the Docker image to Docker Hub.
 
 `auto/rake-test`
 
@@ -182,7 +182,7 @@ Configuration file for Travis CI.
 There are some limitations and risks to this implementation which are discussed in this section.
 
 The application is written in Ruby using the Sinatra framework.
-Using Sinatra we're able to create web applications in Ruby quickly.
+Using Sinatra, we're able to create web applications in Ruby quickly.
 It could be written in NodeJS or Golang but we're able to meet the requirements with Ruby, Sinatra (framework), Rubocop (linter) and Rspec (testing).
 It follows the [Twelve Factor App Methodology](https://12factor.net/) where it is feasible.
 
