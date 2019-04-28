@@ -5,7 +5,7 @@ describe '.server' do
       expect(last_response.status).to eq 200
       info = JSON.parse(last_response.body)
       expect(info.size).to eq 1
-      expect(info['message']).to eq('Hello World')     
+      expect(info['message']).to eq('Hello World')
     end
   end
   context 'when fetching /healthcheck endpoint' do

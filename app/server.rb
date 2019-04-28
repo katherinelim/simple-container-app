@@ -11,7 +11,7 @@ require 'json'
 
 # Endpoints
 get '/' do
-  logger.info("Example log - get / - HELLO WORLD")
+  logger.info('Example log - get / - HELLO WORLD')
   content_type :json
   {
     message: 'Hello World'
