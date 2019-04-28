@@ -191,7 +191,7 @@ Cloud services like AWS will collect the console logs.
 In further work, the logged events could be redirected as required, either to a file,
 syslog or elsewhere using a data collector like [Fluentd](https://www.fluentd.org/).
 
-Although HTTPS is supported by the Puma web server, it's out of scope of this implementation.
+Although HTTPS is supported by the Puma web server, it's out of scope for this implementation.
 For secure connections to the application, it could be listening behind a load balancer or proxy which can handle secure connections.
 
 No monitoring support is provided in this project.
