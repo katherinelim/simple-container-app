@@ -2,11 +2,13 @@ FROM ruby:2.6-slim
 LABEL maintainer="https://github.com/katherinelim/simple-container-app"
 
 # Install build-essential for puma on -slim
-RUN apt-get -qq update && \
-    apt-get -qq -y install build-essential --fix-missing --no-install-recommends
+RUN apt-get -qq update \
+    && apt-get -qq -y install build-essential --fix-missing --no-install-recommends \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /app
-ADD . /app
+COPY . /app
 WORKDIR /app
 
 # Pre-install gems
